@@ -12,10 +12,15 @@ Use a while loop to get valid input from user
 try:
     numerator = int(input("Enter the numerator: "))
     denominator = int(input("Enter the denominator: "))
+    while numerator == 0 or denominator == 0:
+        if numerator == 0:
+            print("Numerator cannot be 0, try again")
+            numerator = int(input("Enter the numerator: "))
+        else:
+            print("Denominator cannot be 0, try again")
+            denominator = int(input("Enter the denominator: "))
     fraction = numerator / denominator
     print(fraction)
 except ValueError:
     print("Numerator and denominator must be valid numbers!")
-except ZeroDivisionError:
-    print("Cannot divide by zero!")
 print("Finished.")
