@@ -2,7 +2,6 @@
 CP1404/CP5632 Practical
 List comprehensions
 """
-from http.cookiejar import join_header_words
 
 names = ["Bob", "Angel", "Jimi", "Alan", "Ada"]
 full_names = ["Bob Martin", "Angel Harlem", "Jimi Hendrix", "Alan Turing", "Ada Lovelace"]
