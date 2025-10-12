@@ -8,12 +8,25 @@ MAXIMUM = 45
 def main():
     """"""
     number_of_quick_picks = get_valid_number()
+    for i in range(number_of_quick_picks):
+        quick_pick = []
+        for j in range(NUMBERS_PER_LINE):
+            number = random.randint(MINIMUM, MAXIMUM)
+            while number in quick_pick:
+                number = random.randint(MINIMUM, MAXIMUM)
+            quick_pick.append(number)
+        quick_pick.sort()
+
+        print(" ".join(f"{number:2}" for number in quick_pick))
 
 
 def get_valid_number():
     """"""
     number_of_quick_picks = int(input("How many quick picks? "))
-    while number_of_quick_picks < 0:
+    while number_of_quick_picks <= 0:
         print("Quick picks cannot be 0")
         number_of_quick_picks = int(input("How many quick picks? "))
     return number_of_quick_picks
+
+
+main()
