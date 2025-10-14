@@ -6,7 +6,7 @@ MAXIMUM = 45
 
 
 def main():
-    """"""
+    """Program that displays quick picks."""
     number_of_quick_picks = get_valid_number()
     for i in range(number_of_quick_picks):
         quick_pick = []
@@ -21,7 +21,7 @@ def main():
 
 
 def get_valid_number():
-    """"""
+    """Gets valid number from user."""
     number_of_quick_picks = int(input("How many quick picks? "))
     while number_of_quick_picks <= 0:
         print("Quick picks cannot be 0")
