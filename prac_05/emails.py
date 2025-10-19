@@ -18,7 +18,8 @@ def main():
         email_to_name[email] = name
         email = input("Email: ")
 
-    determine_name_from_email(email)
+    for email, name in email_to_name.items():
+        print(f"{name} ({email})")
 
 
 def determine_name_from_email(email):
