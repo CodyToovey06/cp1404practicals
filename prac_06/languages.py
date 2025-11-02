@@ -1,3 +1,7 @@
+"""
+Estimated time: 15 minutes
+Actual time: 18
+"""
 from programming_language import ProgrammingLanguage
 
 python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
