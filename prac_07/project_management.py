@@ -1,6 +1,6 @@
 """
-Estimate: 5 hours
-Actual time:
+Estimate: 3 hours
+Actual time: 2.5 hours
 """
 
 from project import Project
