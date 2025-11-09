@@ -20,6 +20,7 @@ class Guitar:
         return f"{self.name} ({self.year} : ${self.cost})"
 
     def __repr__(self):
+        """Return formatted string representation Guitar object."""
         return str(self)
 
     def get_age(self):
