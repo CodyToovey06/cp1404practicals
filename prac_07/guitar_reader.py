@@ -19,6 +19,7 @@ def main():
             print(f"{name}, {cost}, {year}", file=outfile)
     guitars.sort()
     display_guitars(guitars)
+    save_guitars(guitars, FILENAME)
 
 
 def load_guitars(filename):
@@ -34,8 +35,16 @@ def load_guitars(filename):
 
 
 def display_guitars(guitars):
-    """Display Guitars."""
+    """Display formatted guitars from list."""
     for guitar in guitars:
         print(f"{guitar.name}, Year: {guitar.year}, Cost: ${guitar.cost}")
+
+
+def save_guitars(guitars, filename):
+    """Save guitars to csv file."""
+    with open(filename, "w") as output_file:
+        for guitar in guitars:
+            print(f"{guitar.name},{guitar.year},{guitar.cost:.2f}", file=output_file)
+
 
 main()
