@@ -18,11 +18,11 @@ def main():
         with open(FILENAME, 'a') as outfile:
             print(f"{name}, {cost}, {year}", file=outfile)
     guitars.sort()
-    for guitar in guitars:
-        print(guitar)
+    display_guitars(guitars)
 
 
 def load_guitars(filename):
+    """Read guitars from csv file."""
     guitars = []
     in_file = open(filename, 'r')
     for line in in_file:
@@ -32,5 +32,10 @@ def load_guitars(filename):
     in_file.close()
     return guitars
 
+
+def display_guitars(guitars):
+    """Display Guitars."""
+    for guitar in guitars:
+        print(f"{guitar.name}, Year: {guitar.year}, Cost: ${guitar.cost}")
 
 main()
