@@ -70,4 +70,33 @@ def save_projects(projects):
         print(f"{len(projects)} projects saved to {save_file}")
 
 
+def add_projects(projects):
+    """Add new projects into list of projects."""
+    print("Let's add a new project")
+    name = input("Name: ")
+    start_date = input("Start date (dd/mm/yyyy): ")
+    priority = get_valid_number("Priority: ", 0, 10)
+    cost_estimation = float(input("Cost Estimate: $"))
+    completion_percentage = int(input("Percent Complete: "))
+    projects.append(Project(name, start_date, priority, cost_estimation, completion_percentage))
+
+
+def get_valid_number(prompt, low, high):
+    """Get valid integer between low and high."""
+    number = low
+    is_valid_number = False
+    while not is_valid_number:
+        try:
+            number = int(input(prompt))
+            if number < low:
+                print(f"Number must be > {low - 1}")
+            elif number > high:
+                print("Invalid number")
+            else:
+                is_valid_number = True
+        except ValueError:
+            print("Invalid input - please enter a valid number")
+    return number
+
+
 main()
