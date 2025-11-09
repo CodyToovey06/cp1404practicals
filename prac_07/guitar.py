@@ -19,6 +19,9 @@ class Guitar:
         """Return a string representation of a Guitar."""
         return f"{self.name} ({self.year} : ${self.cost})"
 
+    def __repr__(self):
+        return str(self)
+
     def get_age(self):
         """Get age of guitar based on the current year."""
         return CURRENT_YEAR - self.year
