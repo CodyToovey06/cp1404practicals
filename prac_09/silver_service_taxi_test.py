@@ -3,7 +3,7 @@ from silver_service_taxi import SilverServiceTaxi
 
 def main():
     """Test SilverServiceTaxi."""
-    taxi = SilverServiceTaxi("Silver Taxi", 2, 100)
+    taxi = SilverServiceTaxi("Silver Taxi", 100, 2)
     taxi.drive(18)
     print(taxi)
     print(taxi.get_fare())
